@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	<h:head>
+		<script name="jquery/jquery.js" library="primefaces"></script>
+		<title>Venda</title>
+	</h:head>
+	<h:body>
+	<h:form>
+		<p:growl id="messages"/>
+		
+		<p:dataTable var="processamento" value="#{vendaBean.processamentos}">
+			<p:column headerText="ID PROCESSAMENTO" filterBy="#{processamento.idProcessamento}">#{processamento.idProcessamento}</p:column>
+			<p:column headerText="ID VENDA" filterBy="#{processamento.idVenda}">#{processamento.idVenda}</p:column>
+			<p:column headerText="DATA" filterBy="#{processamento.data}">#{processamento.data}</p:column>
+			<p:column headerText="LOJA" filterBy="#{processamento.loja}">#{processamento.loja}</p:column>
+			<p:column headerText="PDV" filterBy="#{processamento.pdv}">#{processamento.pdv}</p:column>
+			<p:column headerText="PRODUTO" filterBy="#{processamento.produto}">#{processamento.produto}</p:column>
+			<p:column headerText="PREÇO UNITÁRIO" filterBy="#{processamento.precoUnitario}">#{processamento.precoUnitario}</p:column>
+			<p:column headerText="DESCONTO" filterBy="#{processamento.desconto}">#{processamento.desconto}</p:column>
+			<p:column headerText="NOME ARQUIVO" filterBy="#{processamento.nomeArquivo}">#{processamento.nomeArquivo}</p:column>
+			<p:column headerText="STATUS" filterBy="#{processamento.status}">#{processamento.status}</p:column>
+		</p:dataTable>
+	
+	</h:form>
+	</h:body>
+</html>

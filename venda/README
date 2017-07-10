@@ -1,0 +1,37 @@
+----------------------------
+Fazendo o build no Eclipse:
+----------------------------
+1. Execute Run As > clean
+2. Execute Run As > install
+
+----------------------------
+Rodando a aplicação no Eclipse:
+----------------------------
+1. Execute Run As > Run Configurations...
+2. Maven Build > New
+3. Insira ${workspace_loc:/venda} em Base directory
+4. Insira tomcat7:run-war em Goals
+5. Clique em Run
+
+--------------
+Relatorio:
+--------------
+O relatório com as informações dos processamentos pode ser acessado através da URL http://localhost:8080/venda/
+
+--------------
+Endpoint:
+--------------
+http://localhost:8080/venda/ws
+
+Obs: Se desejar utilizar o SoapUi para testar o endpoint, utilize o arquivo venda-soapui-project.xml
+
+--------------
+Considerações:
+--------------
+1. Foram feitas pequenas alterações no arquivo json para que o mesmo pudesse se adequar ao objeto Venda
+	- id_venda > idVenda
+	- preco_unitario > precoUnitario
+
+2. Na tabela tb_processamento, foram incluídos os campos produto, desconto e preco_unitario, da tabela tb_item_venda e o 
+campo id_venda da tabela tb_venda.
+
